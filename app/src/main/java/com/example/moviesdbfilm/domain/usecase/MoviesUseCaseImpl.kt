@@ -1,15 +1,16 @@
 package com.example.moviesdbfilm.domain.usecase
 
+import com.example.moviesdbfilm.data.MovieRepository
 import com.example.moviesdbfilm.data.MoviesDataSource
 import com.example.moviesdbfilm.data.repository.IMAGE_URL
 import com.example.moviesdbfilm.domain.models.DataMovie
 
 class MoviesUseCaseImpl(
-    private val moviesDataSource: MoviesDataSource
+    private val repository: MovieRepository
 ): MoviesUseCase {
 
     override suspend fun getMovies(): DataMovie {
-        val moviesResponse = moviesDataSource.getMovies()
+        val moviesResponse = repository.getMovies()
         var movies = DataMovie()
 
         moviesResponse?.let {
@@ -18,6 +19,7 @@ class MoviesUseCaseImpl(
                 movie.poster_path = IMAGE_URL + url
                 movies.results.add(movie)
             }
+            return movies
         }
         return movies
     }

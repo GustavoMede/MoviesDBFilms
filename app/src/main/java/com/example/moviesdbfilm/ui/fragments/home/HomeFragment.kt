@@ -17,14 +17,14 @@ class HomeFragment: Fragment() {
 
     private val moviesViewModel: Movies by viewModel()
 
-    private val adapter = HomeFragmentAdapter()
+    private var homeAdapter = HomeFragmentAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        bind = HomeFragmentLayoutBinding.inflate(layoutInflater, container, false)
+        bind = HomeFragmentLayoutBinding.inflate(inflater, container, false)
 
         return bind!!.root
     }
@@ -32,7 +32,6 @@ class HomeFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setObservers()
-        setRecyclerView()
         moviesViewModel.getMovies()
     }
 
@@ -43,10 +42,10 @@ class HomeFragment: Fragment() {
 
     private fun setRecyclerView() {
         bind?.let {
-            it.homeFragmentRecycleView.run {
+            it.homeFragmentRecyclerView.run {
                 setHasFixedSize(true)
                 layoutManager = GridLayoutManager(requireContext(), 2, GridLayoutManager.VERTICAL, false)
-                adapter = adapter
+                adapter = homeAdapter
             }
         }
     }
@@ -54,9 +53,9 @@ class HomeFragment: Fragment() {
     private fun setObservers() {
         moviesViewModel.moviesLiveData.observe(viewLifecycleOwner, Observer {
             it.data?.let { data ->
-                adapter.submitList(data.results)
+                homeAdapter.submitList(data.results)
             }
-
+            setRecyclerView()
         })
     }
 

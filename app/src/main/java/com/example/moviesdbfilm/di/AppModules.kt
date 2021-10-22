@@ -17,12 +17,10 @@ val appModules = module {
     }
 
     factory<MoviesDataSource> {
-        //MovieRepository
-        MovieDBDataSource(get())
+        MovieDBDataSource()
     }
 
     factory<MoviesUseCase> {
-        //MoviesDataSource
         MoviesUseCaseImpl(get())
     }
 

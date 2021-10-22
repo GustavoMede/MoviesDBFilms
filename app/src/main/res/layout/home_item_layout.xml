@@ -9,7 +9,7 @@
     </data>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:orientation="vertical">
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            app:imgUrl="@{movie.poster_path}"/>
+            android:src="@mipmap/ic_launcher"/>
 
     </LinearLayout>
 </layout>
