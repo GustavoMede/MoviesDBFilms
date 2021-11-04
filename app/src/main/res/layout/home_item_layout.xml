@@ -3,23 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="movie"
-            type="com.example.moviesdbfilm.data.repository.model.Movie" />
+            type="com.example.moviesdbfilm.data.repository.model.moviesdb.Movie" />
     </data>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:padding="2dp">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/home_item_image"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            app:shapeAppearanceOverlay="@style/roundedCornersImageView"
+            app:strokeWidth="2dp"
+            android:padding="2dp"
             android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher"/>
+            android:adjustViewBounds="true"
+            app:imgUrl="@{movie.poster_path}"/>
 
     </LinearLayout>
 </layout>

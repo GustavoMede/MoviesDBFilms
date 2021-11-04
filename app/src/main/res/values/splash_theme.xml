@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="colorPrimary">#454545</item>
+        <item name="colorPrimaryDark">#454545</item>
+        <item name="colorAccent">#454545</item>
+        <item name="android:statusBarColor">#454545</item>
+    </style>
+</resources>

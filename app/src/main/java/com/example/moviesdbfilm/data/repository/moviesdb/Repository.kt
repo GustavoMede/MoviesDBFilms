@@ -1,5 +1,6 @@
-package com.example.moviesdbfilm.data.repository
+package com.example.moviesdbfilm.data.repository.moviesdb
 
+import com.example.moviesdbfilm.data.repository.URL_BASE
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit

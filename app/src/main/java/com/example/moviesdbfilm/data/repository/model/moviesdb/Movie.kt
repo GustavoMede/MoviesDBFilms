@@ -1,13 +1,13 @@
-package com.example.moviesdbfilm.data.repository.model
+package com.example.moviesdbfilm.data.repository.model.moviesdb
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Movie(
-    val backdrop_path: String,
+    var backdrop_path: String,
     var poster_path: String,
     val original_title: String,
     val overview: String,
-    val vote_average: Double
+    val vote_average: String
 ): Parcelable

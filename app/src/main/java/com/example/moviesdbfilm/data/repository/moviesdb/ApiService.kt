@@ -1,6 +1,6 @@
-package com.example.moviesdbfilm.data.repository
+package com.example.moviesdbfilm.data.repository.moviesdb
 
-import com.example.moviesdbfilm.data.repository.model.MovieResponse
+import com.example.moviesdbfilm.data.repository.model.moviesdb.MovieResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="AppLoading" parent="android:Theme.Dialog">
+
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <item name="enterAnim">@android:anim/fade_in</item>
+
+        <item name="exitAnim">@android:anim/fade_out</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:windowIsFloating">true</item>
+
+        <item name="android:backgroundDimEnabled">false</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+
+    </style>
+    
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="character"
+            type="com.example.moviesdbfilm.data.repository.model.marvel.Result" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background"
+        android:layout_margin="7dp">
+
+        <ImageView
+            android:id="@+id/marvel_home_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            app:imgUrl="@{character.thumbnail.path}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_foreground" />
+
+        <View
+            android:id="@+id/marvel_home_item_division"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@android:color/holo_red_light"
+            app:layout_constraintBottom_toTopOf="@id/marvel_home_item_char_name"
+            app:layout_constraintTop_toBottomOf="@id/marvel_home_item_image" />
+
+        <TextView
+            android:id="@+id/marvel_home_item_char_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="15dp"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:characterName="@{character.name}"
+            app:layout_constraintTop_toBottomOf="@id/marvel_home_item_division"
+            tools:text="NOME DO AUTOR" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,13 +1,12 @@
-package com.example.moviesdbfilm.data
+package com.example.moviesdbfilm.data.repository.moviesdb
 
 import com.example.moviesdbfilm.data.repository.API_KEY
-import com.example.moviesdbfilm.data.repository.Repository
-import com.example.moviesdbfilm.data.repository.model.MovieResponse
+import com.example.moviesdbfilm.data.repository.model.moviesdb.MovieResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.lang.Exception
 
-class MovieDBDataSource: MoviesDataSource {
+class MoviesDBDataSourceImpl: MoviesDBDataSource {
 
     override suspend fun getMovies(): MovieResponse? {
         try {
