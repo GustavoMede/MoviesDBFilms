@@ -6,23 +6,30 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesdbfilm.data.repository.model.marvel.Result
-import com.example.moviesdbfilm.databinding.HomeItemLayoutBinding
 import com.example.moviesdbfilm.databinding.MarvelHomeItemLayoutBinding
 
-class MarvelHomeFragmentAdapter: ListAdapter<Result, MarvelHomeFragmentAdapter.HomeViewHolder>(DIFF_CALLBACK) {
+typealias CharListener = (Result) -> Unit
+
+class MarvelHomeFragmentAdapter(
+    private val listener: CharListener
+): ListAdapter<Result, MarvelHomeFragmentAdapter.HomeViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
         return HomeViewHolder.create(parent)
     }
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), listener)
     }
 
     class HomeViewHolder(private val itemLayoutBind: MarvelHomeItemLayoutBinding): RecyclerView.ViewHolder(itemLayoutBind.root){
 
-        fun bind(character: Result){
+        fun bind(character: Result, listener: CharListener){
             itemLayoutBind.character = character
+
+            itemLayoutBind.root.setOnClickListener {
+                listener.invoke(character)
+            }
         }
 
         companion object {

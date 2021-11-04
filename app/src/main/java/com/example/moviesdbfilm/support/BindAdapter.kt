@@ -39,3 +39,10 @@ fun charName(textView: TextView, characterName: String?){
         textView.text = characterName
     }
 }
+
+@BindingAdapter("characterDescription")
+fun charDescription(textView: TextView, characterDescription: String?){
+    characterDescription?.let {
+        textView.text = characterDescription
+    }
+}

@@ -10,7 +10,7 @@
         android:id="@+id/homeFragment"
         android:name="com.example.moviesdbfilm.ui.fragments.home.HomeFragment"
         android:label="@string/list_movies_actionbar_title"
-        tools:layout="@layout/home_fragment_layout" >
+        tools:layout="@layout/home_fragment_layout">
         <action
             android:id="@+id/action_homeFragment_to_movieDetailsFragment"
             app:destination="@id/movieDetailsFragment" />
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/movieDetailsFragment"
-        android:name="com.example.moviesdbfilm.ui.fragments.details.MovieDetailsFragment"
+        android:name="com.example.moviesdbfilm.ui.fragments.moviesdbdetails.MovieDetailsFragment"
         android:label="Movie Details"
         tools:layout="@layout/movie_details_fragment_layout">
         <argument android:name="movie"
@@ -30,7 +30,20 @@
         android:id="@+id/marvelHomeFragment"
         android:name="com.example.moviesdbfilm.ui.fragments.marvel.MarvelHomeFragment"
         android:label="Marvel"
-        tools:layout="@layout/marvel_home_fragment_layout" />
+        tools:layout="@layout/marvel_home_fragment_layout">
+        <action
+            android:id="@+id/action_marvelHomeFragment_to_characterDetailsFragment"
+            app:destination="@id/characterDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailsFragment"
+        android:name="com.example.moviesdbfilm.ui.fragments.marvelcharactersdetails.CharacterDetailsFragment"
+        android:label="CharacterDetailsFragment"
+        tools:layout="@layout/character_details_fragment_layout">
+        <argument
+            android:name="character"
+            app:argType="com.example.moviesdbfilm.data.repository.model.marvel.Result" />
+    </fragment>
 
 
 </navigation>
