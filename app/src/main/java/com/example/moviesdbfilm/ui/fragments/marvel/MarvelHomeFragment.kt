@@ -7,10 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.moviesdbfilm.data.repository.model.marvel.Result
+import com.example.moviesdbfilm.data.repository.model.moviesdb.Movie
 import com.example.moviesdbfilm.databinding.MarvelHomeFragmentLayoutBinding
 import com.example.moviesdbfilm.support.AppLoading
 import com.example.moviesdbfilm.ui.fragments.home.HomeFragmentAdapter
+import com.example.moviesdbfilm.ui.fragments.home.HomeFragmentDirections
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MarvelHomeFragment: Fragment() {
@@ -22,7 +26,7 @@ class MarvelHomeFragment: Fragment() {
     private lateinit var dialog: Dialog
 
     private val homeAdapter by lazy {
-        MarvelHomeFragmentAdapter()
+        MarvelHomeFragmentAdapter(oneCharacterSelected)
     }
 
     override fun onCreateView(
@@ -40,6 +44,18 @@ class MarvelHomeFragment: Fragment() {
         setObservers()
         dialog = AppLoading().show(requireActivity())
         marvelCharactersViewModel.getChars()
+    }
+
+    override fun onDestroyView() {
+        bind = null
+        super.onDestroyView()
+    }
+
+    private val oneCharacterSelected = object : CharListener {
+        override fun invoke(character: Result) {
+            val directions = MarvelHomeFragmentDirections.actionMarvelHomeFragmentToCharacterDetailsFragment(character)
+            findNavController().navigate(directions)
+        }
     }
 
     private fun setObservers() {

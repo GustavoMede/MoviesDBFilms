@@ -1,4 +1,4 @@
-package com.example.moviesdbfilm.ui.fragments.details
+package com.example.moviesdbfilm.ui.fragments.moviesdbdetails
 
 import android.os.Bundle
 import android.view.LayoutInflater
