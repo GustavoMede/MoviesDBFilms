@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/marvelHomeFragment"
         android:name="com.example.moviesdbfilm.ui.fragments.marvel.MarvelHomeFragment"
-        android:label="MarvelHomeFragment"
+        android:label="Marvel"
         tools:layout="@layout/marvel_home_fragment_layout" />
 
 
