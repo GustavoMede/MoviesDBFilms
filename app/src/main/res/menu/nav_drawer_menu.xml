@@ -3,11 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/homeFragment" android:title="MoviesDB"
-        android:icon="@drawable/ic_baseline_api_24"
-        app:showAsAction="always" />
+        android:icon="@drawable/ic_baseline_api_24" />
 
     <item android:id="@+id/marvelHomeFragment" android:title="Marvel"
-        android:icon="@drawable/ic_baseline_api_24"
-        app:showAsAction="always" />
+        android:icon="@drawable/ic_baseline_api_24" />
 
 </menu>

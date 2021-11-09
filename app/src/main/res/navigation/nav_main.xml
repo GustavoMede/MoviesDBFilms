@@ -38,7 +38,7 @@
     <fragment
         android:id="@+id/characterDetailsFragment"
         android:name="com.example.moviesdbfilm.ui.fragments.marvelcharactersdetails.CharacterDetailsFragment"
-        android:label="CharacterDetailsFragment"
+        android:label="Character Details"
         tools:layout="@layout/character_details_fragment_layout">
         <argument
             android:name="character"

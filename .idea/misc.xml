@@ -3,14 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/drawable/image_bottom_blur_gradient.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/drawable/image_top_blur_gradient.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33958333333333335" />
-        <entry key="app/src/main/res/layout/character_details_fragment_layout.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/character_details_fragment_layout.xml" value="0.33958333333333335" />
         <entry key="app/src/main/res/layout/home_fragment_layout.xml" value="0.33958333333333335" />
         <entry key="app/src/main/res/layout/home_item_layout.xml" value="0.33958333333333335" />
-        <entry key="app/src/main/res/layout/loading_layout.xml" value="0.1852355072463768" />
-        <entry key="app/src/main/res/layout/marvel_home_fragment_layout.xml" value="0.1852355072463768" />
-        <entry key="app/src/main/res/layout/marvel_home_item_layout.xml" value="0.1852355072463768" />
-        <entry key="app/src/main/res/layout/movie_details_fragment_layout.xml" value="0.27853260869565216" />
+        <entry key="app/src/main/res/layout/marvel_home_fragment_layout.xml" value="0.1651469098277609" />
+        <entry key="app/src/main/res/layout/movie_details_fragment_layout.xml" value="0.1651469098277609" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.18297101449275363" />
         <entry key="app/src/main/res/menu/nav_drawer_menu.xml" value="0.33958333333333335" />
       </map>
     </option>

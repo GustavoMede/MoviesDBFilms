@@ -32,6 +32,18 @@
                     app:imgUrl="@{movie.backdrop_path}"
                     app:layout_collapseMode="parallax" />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="@drawable/image_bottom_blur_gradient"
+                    android:layout_gravity="bottom"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="@drawable/image_top_blur_gradient"
+                    android:layout_gravity="top"/>
+
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
         </com.google.android.material.appbar.AppBarLayout>
