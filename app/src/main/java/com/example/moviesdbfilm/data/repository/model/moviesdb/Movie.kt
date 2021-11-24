@@ -1,13 +1,18 @@
 package com.example.moviesdbfilm.data.repository.model.moviesdb
 
 import android.os.Parcelable
+import com.squareup.moshi.Json
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Movie(
-    var backdrop_path: String,
-    var poster_path: String,
-    val original_title: String,
+    @Json(name = "backdrop_path")
+    var backdropPath: String,
+    @Json(name = "poster_path")
+    var posterPath: String,
+    @Json(name = "original_title")
+    val originalTitle: String,
     val overview: String,
-    val vote_average: String
+    @Json(name = "vote_average")
+    val voteAverage: String
 ): Parcelable

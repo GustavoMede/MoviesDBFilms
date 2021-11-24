@@ -18,7 +18,7 @@ class MoviesDBDataSourceImpl: MoviesDBDataSource {
             }
             return null
         }catch (e: Exception){
-            return null
+            throw e
         }
     }
 

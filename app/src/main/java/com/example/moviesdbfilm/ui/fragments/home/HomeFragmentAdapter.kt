@@ -44,11 +44,11 @@ class HomeFragmentAdapter(
         private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Movie>(){
 
             override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-                return oldItem.poster_path == newItem.poster_path
+                return oldItem.posterPath == newItem.posterPath
             }
 
             override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-                return oldItem.original_title == newItem.original_title
+                return oldItem.originalTitle == newItem.originalTitle
             }
 
         }
